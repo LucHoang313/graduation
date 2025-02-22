@@ -14,15 +14,25 @@
         .title {
             font-family: 'Pacifico', cursive;
         }
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+            transform: translate(-50%, -50%);
+            border: 2px solid red;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen">
     <div class="text-center p-6 bg-white rounded-lg shadow-lg">
         <h1 class="title text-2xl text-black mb-2">Thân mời bạn đến tham dự</h1>
         <h2 class="title text-4xl text-black mb-2">Lễ tốt nghiệp</h2>
-        <h2 class="title text-4xl text-black mb-4">Hoàng Thế Lực</h2>
-        <div class="relative mb-4">
-            <img alt="Decorative banner with colorful flags" class="absolute top-0 left-0 w-full h-full object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/xJ36gjoBa1cEkG5ZW3z_accyJZyeBpxLKVcJjTHmVcc.jpg" width="400"/>
+        <h2 class="title text-4xl text-black mb-4">Thế Lực</h2>
+        <div class="relative mb-4 bg-purple-100 p-4 rounded-lg">
             <div class="relative z-10">
                 <div class="grid grid-cols-7 gap-2 text-black font-bold">
                     <div>SUN</div>
@@ -39,9 +49,7 @@
                     <div></div>
                     <div></div>
                     <div class="relative">1
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-6 h-6 border-2 border-black rounded-full"></div>
-                        </div>
+                        <div class="circle"></div>
                     </div>
                     <div>2</div>
                     <div>3</div>
