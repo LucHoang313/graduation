@@ -24,6 +24,11 @@
             transform: translate(-50%, -50%);
             border: 2px solid red;
             border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out; /* Speed up the transition */
+        }
+        .circle.visible {
+            opacity: 1;
         }
     </style>
 </head>
@@ -49,7 +54,7 @@
                     <div></div>
                     <div></div>
                     <div class="relative">1
-                        <div class="circle"></div>
+                        <div class="circle" id="circle"></div>
                     </div>
                     <div>2</div>
                     <div>3</div>
@@ -99,7 +104,13 @@
             });
         }
 
-        setInterval(launchConfetti, 2000); // Launch confetti every 2 seconds
+        function toggleCircleVisibility() {
+            const circle = document.getElementById('circle');
+            circle.classList.toggle('visible');
+        }
+
+        setInterval(launchConfetti, 4000); // Launch confetti every 4 seconds
+        setInterval(toggleCircleVisibility, 500); // Toggle circle visibility every 2 seconds
     </script>
 </body>
 </html>
